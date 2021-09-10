@@ -1,0 +1,14 @@
+#include <stdio.h>
+ 
+int main() {
+    int N, hoursN, minutesN, secondsN;
+    scanf("%d", &N);
+    
+  	hoursN = N / 60 / 60;
+  	minutesN = N / 60 % 60;
+    secondsN = N % 60;
+
+    printf("%d:%d:%d\n", hoursN, minutesN, secondsN);
+    
+	  return 0;
+}
