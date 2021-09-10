@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+int main() {
+    int X;
+    scanf("%d", &X);
+    
+    int Y;
+    scanf("%d", &Y);
+    
+    int PROD;
+    PROD = X * Y;
+    printf("PROD = %d\n", PROD);
+ 
+    return 0;
+}
