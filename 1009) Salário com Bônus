@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+int main() {
+    char name[9];
+    scanf("%s", name);
+    
+    double fixedsalary, monthsales;
+    scanf("%lf", &fixedsalary); scanf("%lf", &monthsales);
+    
+    double TOTAL;
+    TOTAL = (monthsales * 0.15 + fixedsalary);
+    printf("TOTAL = R$ %.2lf\n", TOTAL);
+    
+    return 0;
+}
