@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+int main() {
+    int X;
+    scanf("%d", &X);
+    
+    float Y;
+    scanf("%f", &Y);
+    
+    double average;
+    average = (X/Y);
+    printf("%.3lf km/l\n", average);
+    
+    return 0;
+}
