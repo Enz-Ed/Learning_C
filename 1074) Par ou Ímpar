@@ -1,0 +1,25 @@
+#include <stdio.h>
+ 
+int main() {
+    int N, aux, i;
+    scanf("%d", &N);
+    
+    for(aux=0;aux!=N;aux++){
+      scanf("%d", &i);
+      
+		  if(i==0){
+			  printf("NULL\n");
+		  }else if(i%2==0){
+        if(i>0)
+          printf("EVEN POSITIVE\n");
+        else
+          printf("EVEN NEGATIVE\n");
+      }else{
+        if(i>0)
+          printf("ODD POSITIVE\n");
+        else
+          printf("ODD NEGATIVE\n");
+      }
+    }
+    return 0;
+}
