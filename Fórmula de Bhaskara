@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	double numA, numB, numC, delta, raiz1, raiz2;
+	scanf("%lf", &numA); scanf("%lf", &numB); scanf("%lf", &numC);
+	
+	delta = ((numB * numB) + (-4 * numA * numC));
+	raiz1 = ((numB * -1) + sqrt(delta))/(2 * numA);
+	raiz2 = ((numB * -1) - sqrt(delta))/(2 * numA);
+
+	if (delta < 0 || numA == 0){
+		printf("Impossivel calcular\n");
+		
+	}
+	else if (delta == 0){
+		printf("R1 = %.5lf\n", raiz1);
+	}
+	else if (delta > 0){
+		printf("R1 = %.5lf\n", raiz1);
+		printf("R2 = %.5lf\n", raiz2);
+	}
+
+	return 0;
+}
