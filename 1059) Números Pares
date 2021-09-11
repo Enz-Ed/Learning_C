@@ -1,0 +1,11 @@
+#include <stdio.h>
+ 
+int main() {
+    int x, aux;
+    x=2; aux=1;
+    do{
+        printf("%d\n", x*aux);
+        aux++;
+    }while(aux!=51);
+    return 0;
+}
