@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+    float M[12][12], S=0;
+    int i, j, aux=0;
+    char O;
+    scanf(" %c", &O);
+    
+    for(i=0; i<12; i++){
+        for(j=0; j<12; j++){
+            scanf("%f", &M[i][j]);
+            
+            if(j < 11-i){
+                S += M[i][j];
+                aux++;
+            }
+        }
+    }
+    
+    if(O == 'S')
+        printf("%.1f\n", S);
+    if(O == 'M')
+        printf("%.1f\n", S/aux);
+    
+    return 0;
+}
