@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    float i, j; float S=1; int aux=1;
+    for(i=3; i<40; i+=2){
+        j = pow(2, aux);
+        S += i/j;
+        aux++;
+    }
+    printf("%.2f\n", S);
+    return 0;
+}
