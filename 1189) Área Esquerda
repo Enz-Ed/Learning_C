@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+    char O;
+    double M[12][12], soma=0;
+    int i, j, aux=0;
+    scanf(" %c", &O);
+    for(i=0; i<12; i++){
+        for(j=0; j<12; j++){
+            scanf("%lf", &M[i][j]);
+            
+            if((i+j<=10)&&(i>j)){
+                soma += M[i][j];
+                aux++;
+            }
+        }
+    }
+    
+    if(O == 'S')
+        printf("%.1lf\n", soma);
+    else
+        printf("%.1lf\n", soma/aux);
+    return 0;
+}
