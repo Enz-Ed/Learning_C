@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(){
+	double nota1, nota2; int X;
+
+	do{
+		X=0;
+		scanf("%lf", &nota1); 
+		while (nota1<0||nota1>10){
+			printf("nota invalida\n");
+			scanf("%lf", &nota1);
+		}
+		scanf("%lf", &nota2);
+		while (nota2<0||nota2>10){
+			printf("nota invalida\n");
+			scanf("%lf", &nota2);
+		}
+		printf("media = %.2lf\n", ((nota1+nota2)/2));
+		printf("novo calculo (1-sim 2-nao)\n");
+   		scanf("%d", &X);
+	   	while (X!=1&&X!=2){
+ 	   		printf("novo calculo (1-sim 2-nao)\n");
+ 	   	   	scanf("%d", &X);
+	    }
+	}while(X!=2);
+	return 0;
+}
