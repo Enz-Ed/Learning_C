@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int Primo(int X){
+    int count, status;
+    status=0;
+    for(count=1;count<=X;count++){
+        if(X%count==0)
+            status++;
+    }
+    return status;
+}
+
+int main(){
+    int N, X, count, status;
+    scanf("%d", &N);
+    for(count=0;count!=N;count++){
+        scanf("%d", &X);
+        status = Primo(X);
+        if (status==2)
+           printf("%d eh primo\n", X);
+        else
+           printf("%d nao eh primo\n", X);
+    }
+    return 0;
+}
