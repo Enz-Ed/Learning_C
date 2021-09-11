@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+    int M=1, N=1, maior, menor, sum;
+    int i;
+    while(1){
+        sum=0;
+        scanf("%d %d", &M, &N);
+        if ((M<=0)||(N<=0))
+            break;
+        else{
+            maior = (M+N+abs(M-N))/2;
+            menor = (M+N-abs(M-N))/2;
+            for(i=menor; i<=maior; i++){
+                printf("%d ", i);
+                sum+=i;
+            }
+            printf("Sum=%d\n", sum);
+        }
+    }
+    return 0;
+}
