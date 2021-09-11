@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+	int N, X, Y, A, B;
+	scanf("%d", &N);
+	X=0; A=0; B=0;
+	do{
+		scanf("%d", &Y);
+		if(Y>=10 && Y<=20)
+			A+=1;
+		else
+		{
+			B+=1;
+		}
+		X+=1;
+	}while(X!=N);
+	printf("%d in\n", A);
+	printf("%d out\n", B);
+	return 0;
+}
