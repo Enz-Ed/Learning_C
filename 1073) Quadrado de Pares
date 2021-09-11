@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int N, x=2;
+    scanf("%d", &N);
+    do{
+        printf("%d^2 = %d\n", x, x*x);
+        x+=2;
+    }while (x <= N);
+    return 0;
+}
