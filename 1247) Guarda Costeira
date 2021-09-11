@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+void Primo(int D, float VF, float VG){
+    int dist; float TF, TG;
+    dist = sqrt(12*12 + D*D);
+    TF = (12.0/VF);
+    TG = (dist/VG);
+        if(TG<=TF)
+            printf("S\n");
+        else
+            printf("N\n");
+}
+
+int main(){
+    int D; float VF, VG;
+    while(scanf("%d %f %f", &D, &VF, &VG)!=EOF){
+        Primo(D, VF, VG);
+    }
+    return 0;
+}
