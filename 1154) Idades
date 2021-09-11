@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    int N, aux=0; float idade_media = 0;
+    scanf("%d", &N);
+    while (N>=0){
+        idade_media += N;
+        aux++;
+        scanf("%d", &N);
+    }
+    printf("%.2f\n", idade_media/aux);
+    return 0;
+}
