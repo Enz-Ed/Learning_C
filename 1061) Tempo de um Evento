@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+	int dia1, dia2, hora1, hora2, min1, min2, seg1, seg2;
+	scanf("%*s%d", &dia1); 
+	scanf("%d%*s%d%*s%d", &hora1, &min1, &seg1);
+	scanf("%*s%d", &dia2); 
+	scanf("%d%*s%d%*s%d", &hora2, &min2, &seg2);
+
+	int totalseg1, totalseg2, duracaoseg;
+	totalseg1 = ((dia1-1)*86400) + (hora1*3600) + (min1*60) + seg1; 
+	totalseg2 = ((dia2-1)*86400) + (hora2*3600) + (min2*60) + seg2; 
+	duracaoseg = totalseg2 - totalseg1;
+
+	printf("%d dia(s)\n", duracaoseg/86400);
+	printf("%d hora(s)\n", (duracaoseg%86400)/3600);
+	printf("%d minuto(s)\n", ((duracaoseg%86400)%3600)/60);
+	printf("%d segundo(s)\n", ((duracaoseg%86400)%3600)%60);
+	return 0;
+}
