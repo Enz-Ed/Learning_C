@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    int X, count, Y;
+    scanf("%d", &X);
+    count=1;
+    Y=X-1;
+    do{
+        printf("%d\n", count);
+        count+=2;
+    }while((count!=X)&&(count!=Y));
+    printf("%d\n", count);
+    return 0;
+}
