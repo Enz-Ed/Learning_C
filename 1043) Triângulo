@@ -1,0 +1,21 @@
+#include <stdio.h>
+ 
+int main() {
+    float A, B, C, difAB, difAC, difBC, perimetro, area;;
+    scanf("%f", &A); 
+    scanf("%f", &B); scanf("%f", &C);
+	 
+    difAB = fabs(A-B); 
+    difAC = fabs(A-C); 
+    difBC = fabs(B-C);
+    
+	  perimetro = A+B+C; 
+    area = (((A+B)*C)/2);
+    
+    if ((A<(B+C) && A>difBC) || (B<(A+C) && B>difAC) || (C<(A+B) && C>difAB))
+    	printf("Perimetro = %.1f\n", perimetro);
+	  else
+    	printf("Area = %.1f\n", area);
+	
+	  return 0;
+}
