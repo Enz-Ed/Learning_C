@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+    int N, i, quantia; char cobaia;
+    float somacoelho=0, somarato=0, somasapo=0, total;
+    float x;
+    scanf("%d", &N);
+    for(i=0; i<N; i++){
+        scanf("%d %c", &quantia, &cobaia);
+        switch (cobaia){
+            case 'C': somacoelho += quantia;
+                      break;
+            case 'R': somarato += quantia;
+                      break;
+            case 'S': somasapo += quantia;
+                      break;
+        }
+    }
+    total = somacoelho+somarato+somasapo;
+    printf("Total: %.0f cobaias\n", total);
+    printf("Total de coelhos: %.0f\n", somacoelho);
+    printf("Total de ratos: %.0f\n", somarato);
+    printf("Total de sapos: %.0f\n", somasapo);
+    printf("Percentual de coelhos: %.2f %%\n", (somacoelho*100)/total);
+    printf("Percentual de ratos: %.2f %%\n", (somarato*100)/total);
+    printf("Percentual de sapos: %.2f %%\n", (somasapo*100)/total);
+    return 0;
+}
