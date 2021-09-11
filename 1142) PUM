@@ -1,0 +1,10 @@
+#include <stdio.h>
+ 
+int main() {
+    int N, x, count;
+    scanf("%d", &N);
+    x=0;
+    for(count=0;count<=N-1;count+=1)
+        printf("%d %d %d PUM\n", 1+x+(4*count), 2+x+(4*count), 3+x+(4*count));
+    return 0;
+}
