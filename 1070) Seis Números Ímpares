@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+    int X, count;
+    scanf("%d", &X);
+    count=0;
+    if(X%2==0)
+        X+=1;
+    do{
+        printf("%d\n", X);
+        X+=2;
+        count+=1;
+    }while(count!=6);
+    return 0;
+}
