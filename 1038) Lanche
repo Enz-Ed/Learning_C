@@ -1,0 +1,27 @@
+#include <stdio.h>
+ 
+int main() {
+    int X, Y; float total;
+    scanf("%d", &X); scanf("%d", &Y);
+    
+    switch (X){
+        case 1: 
+            total = 4 * Y;
+            break;
+        case 2:
+            total = 4.5 * Y;
+            break;
+        case 3:
+            total = 5 * Y;
+            break;
+        case 4:
+            total = 2 * Y;
+            break;
+        case 5:
+            total = 1.5 * Y;
+            break;
+    }
+    
+    printf("Total: R$ %.2f\n", total);
+    return 0;
+}
