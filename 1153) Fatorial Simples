@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    int N, somafat=1;
+    int i;
+    scanf("%d", &N);
+    for(i=N; i>1; i--){
+        somafat *= i;
+    }
+    printf("%d\n", somafat);
+    return 0;
+}
