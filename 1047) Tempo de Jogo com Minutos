@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main(){
+	int hora1, min1, hora2, min2, horatotal, mintotal;
+	scanf("%d", &hora1); scanf("%d", &min1);
+	scanf("%d", &hora2); scanf("%d", &min2);
+	
+	if (hora1 < hora2) {
+		if (min1 < min2) {
+			horatotal = hora2 - hora1;
+			mintotal = min2 - min1;
+		}else if (min1 == min2){
+			horatotal = hora2 - hora1;
+			mintotal = 0;
+		}else if (min1 > min2){
+		   	horatotal = hora2 - hora1 - 1;
+		   	mintotal = 60 - min1 + min2;
+		}
+	}
+	
+	else if (hora1 == hora2) {
+		
+		if (min1 < min2) {
+			horatotal = 0;
+			mintotal = min2 - min1;
+			
+		}else if (min1 == min2) {
+			horatotal = 24;
+			mintotal = 0;
+			
+		}else if (min1 > min2){
+			horatotal = 23;
+	   		mintotal = 60 - (min1 - min2);
+		}
+	}
+	
+	else if (hora1 > hora2) {
+		if (min1 < min2) {
+			horatotal = 24 - (hora1 - hora2);
+			mintotal = min2 - min1;
+		}else if (min1 == min2) {
+			horatotal = 24 - (hora1 - hora2);
+			mintotal = 0;
+		}else if (min1 > min2) {
+			horatotal = 24 - (hora1 - hora2) - 1;
+			mintotal = 60 - (min1 - min2);
+		}
+	}
+	
+	printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horatotal, mintotal);	
+	return 0;
+}
