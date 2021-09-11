@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void Fibonacci(int N){
+    int x, y, count, fibo;
+    x = 0; y = 1;
+    if(N>=1)
+        printf("%d", x);
+    if(N>=2)
+        printf(" %d", y);
+    if(N>=3)
+        for(count=2;count<N;count++){
+            fibo = x + y;
+            printf(" %d", fibo);
+            x = y;
+            y = fibo;
+        }
+    printf("\n");
+}
+
+int main(){
+    int N;
+    scanf("%d", &N);
+    Fibonacci(N);
+    return 0;
+}
