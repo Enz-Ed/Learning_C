@@ -1,0 +1,16 @@
+#include <stdio.h> 
+ 
+int main() {
+    int A, B, X, MaiorAB, MaiorAX;
+    
+    scanf("%d", &A); 
+    scanf("%d", &B); 
+    scanf("%d", &X); 
+    
+    MaiorAB = (A + B + abs(A-B))/2;
+	  MaiorAX = (MaiorAB + X + abs(MaiorAB-X))/2;
+    
+    printf("%d eh o maior\n", MaiorAX);
+    
+    return 0;
+}
