@@ -1,0 +1,23 @@
+#include <stdio.h>
+ 
+int main() {
+    int L, Vi, count, fast;
+    
+    while(scanf("%d", &L)!=EOF){
+ 	    fast=0;
+    	for(count=0;count<L;count+=1){
+        	scanf("%d", &Vi);
+			    if(Vi>fast){
+				    fast=Vi;
+			    }
+      }
+		  if(fast<10){
+			    printf("1\n");
+    	}else if(fast>=10 && fast<20){
+       	  printf("2\n");
+    	}else if(fast>=20){
+        	printf("3\n");
+    	}
+	 }
+   return 0;
+}
