@@ -1,0 +1,13 @@
+#include <stdio.h>
+ 
+int main() {
+    int N, aux;
+    scanf("%d", &N);
+    for(aux=0;aux<10000;aux++){
+        if(aux%N==2){
+            printf("%d\n", aux);
+            aux+=(N-1);
+        }
+    }
+    return 0;
+}
