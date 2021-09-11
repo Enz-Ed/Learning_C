@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(){
+	int N, x;
+	scanf("%d", &N);
+	for(x=1;x<=N;x+=1){
+		printf("%d %d %d\n", x, x*x, x*x*x);
+	}
+	return 0;
+}
