@@ -1,0 +1,13 @@
+#include <stdio.h>
+ 
+int main() {
+    int N, y=1;
+    scanf("%d", &N);
+
+    do{
+        printf("%d x %d = %d\n", y, N, N*y);
+        y+=1;
+    }while(y!=11);
+    
+    return 0;
+}
