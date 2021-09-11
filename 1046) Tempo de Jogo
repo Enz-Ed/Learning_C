@@ -1,0 +1,19 @@
+#include <stdio.h>
+ 
+int main() {
+    int Hora1, Hora2, MaiorValor, MenorValor, Duracao;
+    scanf("%d", &Hora1);
+    scanf("%d", &Hora2);
+    
+  	MaiorValor = (Hora1 + Hora2 + abs(Hora1-Hora2))/2;
+	  MenorValor = (Hora1 + Hora2 - abs(Hora1-Hora2))/2;
+
+    if(Hora1 >= Hora2)
+      Duracao = 24 - MaiorValor + MenorValor;
+    else
+      Duracao = MaiorValor - MenorValor;
+     
+  	printf("O JOGO DUROU %d HORA(S)\n", Duracao);
+    
+    return 0;
+}
